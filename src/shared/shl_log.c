@@ -157,7 +157,7 @@ static void log__submit(const char *file,
 
 	if (log_date_time) {
         	gettimeofday(&tv, NULL);
-		millisec = lrint(tv.tv_usec/1000.0);
+		millisec = llrint(tv.tv_usec/1000.0);
 		if (millisec>=1000) {
 			millisec -=1000;
 			tv.tv_sec++;
